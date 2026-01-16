@@ -1,4 +1,7 @@
 import { Check } from "lucide-react";
+import churrosTradicional from "@/assets/churros-tradicional.jpeg";
+import churrosEspanhol from "@/assets/churros-espanhol.jpeg";
+import miniChurros from "@/assets/mini-churros.jpeg";
 
 const produtos = [
   {
@@ -6,21 +9,21 @@ const produtos = [
     size: "16cm",
     description: "Churros tradicional congelado, apenas a massa, ideal para rechear após a fritura com doce de leite, chocolate, creme ou recheio de sua preferência.",
     specs: ["Massa artesanal", "Pronto para fritar", "16 cm", "Pacotes com 50 ou 100 unidades"],
-    image: "🥖",
+    image: churrosTradicional,
   },
   {
     name: "Churros Espanhol",
     size: "16cm",
     description: "Churros no estilo espanhol, perfeitos para servir em porções e acompanhar com caldas ou doces.",
     specs: ["Versátil", "Ideal para porções e combos", "Congelado, pronto para fritar", "Pacotes com 50 ou 100 unidades"],
-    image: "🍩",
+    image: churrosEspanhol,
   },
   {
     name: "Mini Churros Doce de Leite",
     size: "20g",
     description: "Mini churros recheados com doce de leite, já prontos, padronizados e ideais para porções, sobremesas e delivery.",
     specs: ["Recheado", "20g por unidade", "Alto giro", "Pacotes com 50 ou 100 unidades"],
-    image: "✨",
+    image: miniChurros,
   },
 ];
 
@@ -43,9 +46,14 @@ const Produtos = () => {
               key={produto.name}
               className="bg-card rounded-2xl overflow-hidden shadow-sm border border-border hover:shadow-xl transition-all group"
             >
-              {/* Placeholder temático */}
-              <div className="h-48 bg-gradient-to-br from-primary/10 via-accent/5 to-primary/5 flex items-center justify-center">
-                <span className="text-7xl">{produto.image}</span>
+              {/* Product Image */}
+              <div className="h-48 overflow-hidden">
+                <img 
+                  src={produto.image} 
+                  alt={produto.name}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
+                />
               </div>
 
               <div className="p-6">
