@@ -4,7 +4,6 @@ import IdealPara from "@/components/IdealPara";
 import Diferenciais from "@/components/Diferenciais";
 import Produtos from "@/components/Produtos";
 import Beneficios from "@/components/Beneficios";
-import Galeria from "@/components/Galeria";
 import AreaAtendimento from "@/components/AreaAtendimento";
 import CTAFinal from "@/components/CTAFinal";
 import Footer from "@/components/Footer";
@@ -20,7 +19,6 @@ const Index = () => {
         <Diferenciais />
         <Produtos />
         <Beneficios />
-        <Galeria />
         <AreaAtendimento />
         <CTAFinal />
       </main>
