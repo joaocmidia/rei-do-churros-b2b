@@ -11,7 +11,8 @@ const AreaAtendimento = () => {
           <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-4">
             Área de Atendimento
           </h2>
-          <p className="text-muted-foreground text-lg mb-8">Atendemos Jundiaí e região. Para mais informações, fale com a gente no WhatsApp. Para mais informações, fale com a gente no WhatsApp.. Para mais informações, fale com a gente no WhatsApp.
+          <p className="text-muted-foreground text-lg mb-8">Atendemos Jundiaí e região.
+Para mais informações, fale com a gente no WhatsApp.<strong className="text-foreground">Jundiaí</strong>. Para mais informações, fale com a gente no WhatsApp.
           </p>
           <Button asChild variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all">
             <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
