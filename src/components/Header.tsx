@@ -7,7 +7,6 @@ const navItems = [
   { label: "Diferenciais", href: "#diferenciais" },
   { label: "Indicado Para", href: "#indicado-para" },
   { label: "Benefícios", href: "#beneficios" },
-  { label: "Fotos", href: "#fotos" },
   { label: "Contato", href: "#contato" },
 ];
 
