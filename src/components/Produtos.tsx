@@ -2,34 +2,27 @@ import { Check } from "lucide-react";
 import churrosTradicional from "@/assets/churros-tradicional.jpeg";
 import churrosEspanhol from "@/assets/churros-espanhol.jpeg";
 import miniChurros from "@/assets/mini-churros.jpeg";
-
-const produtos = [
-  {
-    name: "Churros Tradicional",
-    size: "16cm",
-    description: "Churros tradicional congelado, apenas a massa, ideal para rechear após a fritura com doce de leite, chocolate, creme ou recheio de sua preferência.",
-    specs: ["Massa artesanal", "Pronto para fritar", "16 cm", "Pacotes com 50 ou 100 unidades"],
-    image: churrosTradicional,
-  },
-  {
-    name: "Churros Espanhol",
-    size: "16cm",
-    description: "Churros no estilo espanhol, perfeitos para servir em porções e acompanhar com caldas ou doces.",
-    specs: ["Versátil", "Ideal para porções e combos", "Congelado, pronto para fritar", "Pacotes com 50 ou 100 unidades"],
-    image: churrosEspanhol,
-  },
-  {
-    name: "Mini Churros Doce de Leite",
-    size: "20g",
-    description: "Mini churros recheados com doce de leite, já prontos, padronizados e ideais para porções, sobremesas e delivery.",
-    specs: ["Recheado", "20g por unidade", "Alto giro", "Pacotes com 50 ou 100 unidades"],
-    image: miniChurros,
-  },
-];
-
+const produtos = [{
+  name: "Churros Tradicional",
+  size: "16cm",
+  description: "Churros tradicional congelado, apenas a massa, ideal para rechear após a fritura com doce de leite, chocolate, creme ou recheio de sua preferência.",
+  specs: ["Massa artesanal", "Pronto para fritar", "16 cm", "Pacotes com 50 ou 100 unidades"],
+  image: churrosTradicional
+}, {
+  name: "Churros Espanhol",
+  size: "16cm",
+  description: "Churros no estilo espanhol, perfeitos para servir em porções e acompanhar com caldas ou doces.",
+  specs: ["Versátil", "Ideal para porções e combos", "Congelado, pronto para fritar", "Pacotes com 50 ou 100 unidades"],
+  image: churrosEspanhol
+}, {
+  name: "Mini Churros Doce de Leite",
+  size: "20g",
+  description: "Mini churros recheados com doce de leite, já prontos, padronizados e ideais para porções, sobremesas e delivery.",
+  specs: ["Recheado", "20g por unidade", "Alto giro", "Pacotes com 50 ou 100 unidades"],
+  image: miniChurros
+}];
 const Produtos = () => {
-  return (
-    <section id="produtos" className="py-16 md:py-24 bg-muted/50">
+  return <section id="produtos" className="py-16 md:py-24 bg-muted/50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-4">
@@ -41,19 +34,10 @@ const Produtos = () => {
         </div>
 
         <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {produtos.map((produto) => (
-            <div
-              key={produto.name}
-              className="bg-card rounded-2xl overflow-hidden shadow-sm border border-border hover:shadow-xl transition-all group"
-            >
+          {produtos.map(produto => <div key={produto.name} className="bg-card rounded-2xl overflow-hidden shadow-sm border border-border hover:shadow-xl transition-all group">
               {/* Product Image */}
               <div className="h-48 overflow-hidden">
-                <img 
-                  src={produto.image} 
-                  alt={produto.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  loading="lazy"
-                />
+                <img src={produto.image} alt={produto.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
               </div>
 
               <div className="p-6">
@@ -67,20 +51,15 @@ const Produtos = () => {
                   {produto.description}
                 </p>
                 <ul className="space-y-2">
-                  {produto.specs.map((spec) => (
-                    <li key={spec} className="flex items-center gap-2 text-sm text-foreground">
+                  {produto.specs.map(spec => <li key={spec} className="flex items-center gap-2 text-sm text-foreground">
                       <Check className="w-4 h-4 text-primary flex-shrink-0" />
-                      <span>{spec}</span>
-                    </li>
-                  ))}
+                      
+                    </li>)}
                 </ul>
               </div>
-            </div>
-          ))}
+            </div>)}
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Produtos;
