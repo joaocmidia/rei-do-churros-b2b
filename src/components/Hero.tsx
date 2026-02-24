@@ -40,19 +40,25 @@ const Hero = () => {
             ))}
           </ul>
 
-          <div className="flex flex-col items-center gap-3">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button
               asChild
               size="lg"
               className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 py-6 rounded-full shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all"
             >
               <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-                Solicitar orçamento no WhatsApp
+                Quero revender
               </a>
             </Button>
-            <span className="text-sm text-muted-foreground">
-              Atendimento direto via WhatsApp
-            </span>
+            <Button
+              asChild
+              size="lg"
+              className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8 py-6 rounded-full shadow-lg shadow-accent/25 hover:shadow-xl hover:shadow-accent/30 transition-all"
+            >
+              <a href="https://oreidochurros.com.br?utm_source=site_churros_congelado&utm_medium=botao" target="_blank" rel="noopener noreferrer">
+                Quero para consumo próprio
+              </a>
+            </Button>
           </div>
         </div>
       </div>

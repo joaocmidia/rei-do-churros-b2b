@@ -14,11 +14,18 @@ const AreaAtendimento = () => {
           <p className="text-muted-foreground text-lg mb-8">Atendemos <strong className="text-foreground">Jundiaí e região</strong>.
 Para mais informações, fale com a gente no WhatsApp.
           </p>
-          <Button asChild variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all">
-            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-              Falar no WhatsApp
-            </a>
-          </Button>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground transition-all">
+              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+                Quero revender
+              </a>
+            </Button>
+            <Button asChild variant="outline" size="lg" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-all">
+              <a href="https://oreidochurros.com.br?utm_source=site_churros_congelado&utm_medium=botao" target="_blank" rel="noopener noreferrer">
+                Quero para consumo próprio
+              </a>
+            </Button>
+          </div>
         </div>
       </div>
     </section>;
